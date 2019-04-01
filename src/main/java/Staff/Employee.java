@@ -37,9 +37,12 @@ public class Employee {
     }
 
     public void raiseSalary(double amount) {
-        double newSalary = this.salary + amount;
-        this.salary = newSalary;
+        if (amount > 0) {
+            double newSalary = this.salary + amount;
+            this.salary = newSalary;
+        }
     }
+
 
     public double payBonus() {
         double employeeSalary = this.salary;

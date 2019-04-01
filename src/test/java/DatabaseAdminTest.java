@@ -39,6 +39,12 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void cannotRaiseSalaryNegativeAmount() {
+        databaseAdmin.raiseSalary(-5000);
+        assertEquals(18000, databaseAdmin.getSalary(),4);
+    }
+
+    @Test
     public void canPayBonus() {
         assertEquals(180,  databaseAdmin.payBonus(), 2);
     }
