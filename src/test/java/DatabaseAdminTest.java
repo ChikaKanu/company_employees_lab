@@ -10,13 +10,20 @@ public class DatabaseAdminTest {
 
     @Before
     public void before() {
-        databaseAdmin = new DatabaseAdmin("Chika kanu", 98675, 18000);
+        databaseAdmin = new DatabaseAdmin("Chika Kanu", 98675, 18000);
     }
 
     @Test
     public void canGetName() {
         databaseAdmin.setName("Cull Blue");
         assertEquals("Cull Blue", databaseAdmin.getName());
+    }
+
+    @Test
+    public void cannotSetNameIfNullOrEmpty() {
+        databaseAdmin.setName("");
+        databaseAdmin.setName(null);
+        assertEquals("Chika Kanu", databaseAdmin.getName());
     }
 
     @Test

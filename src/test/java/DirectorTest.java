@@ -20,6 +20,13 @@ public class DirectorTest {
     }
 
     @Test
+    public void cannotSetNameIfNullOrEmpty() {
+        director.setName("");
+        director.setName(null);
+        assertEquals("Orange Paine", director.getName());
+    }
+
+    @Test
     public void canGetNiNumber() {
         int newNiNumber = 504652;
         director.setNiNumber(newNiNumber);

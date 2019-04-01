@@ -17,7 +17,9 @@ public class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name != null && !name.isEmpty()) {
+            this.name = name;
+        }
     }
 
     public int getNiNumber() {

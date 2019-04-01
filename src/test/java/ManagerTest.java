@@ -20,6 +20,13 @@ public class ManagerTest {
     }
 
     @Test
+    public void cannotSetNameIfNullOrEmpty() {
+        manager.setName("");
+        manager.setName(null);
+        assertEquals("John Parker", manager.getName());
+    }
+
+    @Test
     public void canGetNiNumber() {
         int newNiNumber = 004652;
         manager.setNiNumber(newNiNumber);

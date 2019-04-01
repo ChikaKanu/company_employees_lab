@@ -19,6 +19,13 @@ public class DeveloperTest {
         assertEquals("Rich Diamond", developer.getName());
     }
 
+    @Test
+    public void cannotSetNameIfNullOrEmpty() {
+        developer.setName("");
+        developer.setName(null);
+        assertEquals("Jack Bull", developer.getName());
+    }
+
     public void canGetNiNumber() {
         int newNiNumber = 10752;
         developer.setNiNumber(newNiNumber);
