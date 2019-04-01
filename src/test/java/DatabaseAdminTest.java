@@ -14,6 +14,12 @@ public class DatabaseAdminTest {
     }
 
     @Test
+    public void canGetName() {
+        databaseAdmin.setName("Cull Blue");
+        assertEquals("Cull Blue", databaseAdmin.getName());
+    }
+
+    @Test
     public void canGetNiNumber() {
         int newNiNumber = 10752;
         databaseAdmin.setNiNumber(newNiNumber);
